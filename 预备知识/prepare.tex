@@ -1,0 +1,100 @@
+\documentclass[10pt]{beamer}
+\usetheme{Berlin}
+
+\usepackage{ctex}
+\usepackage{graphicx, graphics}
+\usepackage{float, array, color, ctex}
+\usepackage{amsmath, amssymb, amsfonts}
+\usepackage{multicol, multirow, makecell, tabu, dcolumn}
+\usepackage{fancyhdr, lastpage}
+\usepackage{setspace}
+\usepackage{geometry}
+
+\usefonttheme[onlymath]{serif}
+
+\geometry{papersize={144mm, 108mm}}
+
+\setsansfont{苹方-简.ttf}
+\setCJKsansfont{苹方-简.ttf}
+
+\setstretch{1.25}
+
+\AtBeginSection[]
+{
+	\begin{frame}
+		\frametitle{当前进度}
+		\tableofcontents[currentsection]
+	\end{frame}
+}
+
+\AtBeginSubsection[]
+{
+	\begin{frame}
+		\frametitle{当前进度}
+		\tableofcontents[currentsubsection]
+	\end{frame}
+}
+
+% 下面的内容会在标题页上展示
+\title{算法竞赛预备知识}
+\author{wwh}
+\institute{合肥一六八中学}
+\date{\today}
+
+\begin{document}% 下面都是要显示的内容
+	\frame{\titlepage}% 显示标题页
+	
+	\begin{frame}
+		\frametitle{目录}
+		\tableofcontents % 这个命令将会显示目录
+	\end{frame}
+
+	\section{C 与 C++ 简介}
+
+	\section{编译工具、环境变量、命令行}	
+	
+	\subsection{编译工具}
+	\begin{frame}
+		\frametitle{程序是如何运行的}
+		有一套精妙的步骤使得我们的程序跑起来。
+		
+		预处理$\to$编译$\to$汇编$\to$链接（这一套东西现阶段不需要理解，有兴趣的同学可以看看《深入理解计算机系统(CS:APP)》）
+		
+		\pause
+		
+		以上步骤都在 C++ 语言中，都通过 GCC 中的 gcc/g++ 完成。
+	\end{frame}
+	\begin{frame}
+		\frametitle{拓展知识}
+		\begin{block}{GNU, GCC, gcc 与 g++ 的简要区别与联系}
+			\begin{itemize}
+				\item<1-> GNU(GNU's Not Unix) 是 1984 年 Richard Stallman 发起的免税慈善项目，首次提出了自由软件(free software)的概念。
+				\item<2-> GCC(GNU Compiler Collection) 是 GUN 的编译器集合，可以编译 C、C++、Pascal 等语言。
+				\item<3-> gcc(GNU C Compiler) 是 GCC 中的 C 编译器。
+				\item<3-> g++(GNU C++ Compiler) 是 GCC 中的 C++编译器。
+				\item<4-> gcc 把 C 和 C++ 程序分开编译，且对于 C++ 文件不会自动链接 STL；g++ 对于 C 和 C++ 程序都按照 C++ 程序编译，且自动链接 STL（在之后的学习中会学到 STL）。
+			\end{itemize}
+		\end{block}
+		
+		\pause
+		\pause
+		\pause
+		
+		
+		我们在 OI 学习中使用 g++ 编译程序！
+	\end{frame}
+	
+	
+	\subsection{环境变量}
+	\begin{frame}
+		\frametitle{什么是环境变量}
+		系统环境中的变量。
+	\end{frame}
+	
+	\subsection{命令行}
+	
+	\section{代码编辑器}
+	
+	\section{杂项}
+	
+\end{document}
